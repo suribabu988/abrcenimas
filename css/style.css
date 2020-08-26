@@ -21,6 +21,7 @@ body {
     color: #4e4e4e;
     font-size: 1.1rem;
     font-family: "OpenSans", sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -28,6 +29,20 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+:root {
+    --green: #44956f;
+    --dark-green: #307e64;
+    --white: #fff;
+    --blue: #0f8fe0;
+    --dark-blue: #00508d;
+    --site-blue: #475776;
+}
+
+.gradient-blue {
+    background-image: linear-gradient(180deg,  var(--site-blue)2%, var(--site-blue));
+}
+
 
 h1,
 h2,
@@ -443,6 +458,8 @@ a:hover {
 #home .carousel-inner img {
     width: 100%;
     height: calc(100vh - 80px);
+    background-size: contain;
+    object-fit: cover;
 }
 
 
@@ -491,10 +508,8 @@ a:hover {
 
 .frame-video {
     width: 100%;
-    height: 100%;
+    height: 400px;
     max-width: 700px;
-    max-height: 400px;
-    min-height: 200px;
     margin: auto;
     display: block;
     margin-top: 25px
@@ -700,8 +715,8 @@ th {
 
 .contact .contact-form input.sub-btn {
     width: 15vw;
-    border: 2px dotted #475776;
-    background: #475776;
+    border: transparent;
+    background: linear-gradient(to right, var(--site-blue) 2%, var(--site-blue));
     color: #fff !important;
     padding: 15px;
     text-transform: capitalize;
@@ -725,15 +740,17 @@ footer {
     text-align: center;
     color: #fff;
     padding-bottom: 0rem;
-    background: #475776;
+    background: #343a40 !important;
 }
 
 footer .copyright {
     margin-bottom: .3rem;
+    font-size: 0.9rem;
 }
 
 footer .credits {
     margin-bottom: 0;
+    font-size: 0.9rem;
 }
 
 footer .credits a {
@@ -808,6 +825,9 @@ footer .credits a {
         width: 100%;
         min-height: 200px;
         height: 100%;
+        background-size: contain;
+        object-fit: cover;
+
     }
 
     .sub-head {
@@ -828,6 +848,8 @@ footer .credits a {
 
     #home .carousel-inner img {
         width: 100%;
+        background-size: contain;
+        object-fit: cover;
         height: calc(100vh - 80px);
     }
 }
