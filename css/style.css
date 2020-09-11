@@ -40,7 +40,7 @@ body {
 }
 
 .gradient-blue {
-    background-image: linear-gradient(180deg,  var(--site-blue)2%, var(--site-blue));
+    background-image: linear-gradient(180deg, var(--site-blue)2%, var(--site-blue));
 }
 
 
@@ -462,6 +462,24 @@ a:hover {
     object-fit: cover;
 }
 
+#home .carousel-caption {
+    bottom: 55%;
+    font-size: 3.5vw;
+    color: #ffffff;
+}
+
+.overlay-intro {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* opacity: 1; */
+    z-index: 1;
+}
+
 
 .carousel-indicators .active {
     background-color: #C31D49;
@@ -519,6 +537,10 @@ a:hover {
     .mt--5 {
         margin-top: 10%;
     }
+
+    #home .carousel-caption {
+        font-size: 5vw;
+    }
 }
 
 /*======================================
@@ -565,6 +587,10 @@ a:hover {
     background-image: url(../image/be6a4ad08f61c299.jpg);
 }
 
+.cinema {
+    background-image: url(../image/cinema.jpg);
+}
+
 .white {
     color: #ffffff !important;
 }
@@ -573,7 +599,6 @@ a:hover {
     background-color: #475776;
 }
 
-element.style {}
 
 .table {
     width: 100%;
