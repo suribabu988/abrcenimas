@@ -306,8 +306,8 @@ a:hover {
 .navbar-b.navbar-reduce .active>.nav-link:before,
 .navbar-b.navbar-reduce .nav-link.show:before,
 .navbar-b.navbar-reduce .nav-link.active:before {
-    width: 67%;
-    background: linear-gradient(to right, #1689c5 10%, #1782ba 10%, #219fd5 30%, #1e9dd4 70%, #21a3db 100%, #21a5de 100%);
+    width: 35%;
+    background: linear-gradient(to right, #034ea2 0%, #034ea2 50%, #ffffff 50%, #ffffff 100%);
 }
 
 .navbar-b.navbar-trans .nav-link:before {
@@ -1436,11 +1436,11 @@ footer .credits a {
 }
 
 /* testimonials */
-.testimonials {
+/* .testimonials {
     background: url("/images/testimonial_bg.jpg") 0 0 no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 .primary-link {
     color: #e90775 !important;
@@ -1453,6 +1453,7 @@ footer .credits a {
     font-weight: 800;
     margin-top: 1rem;
     margin-left: 1rem;
+    font-family: monospace;
 }
 
 .bgblack {
@@ -1605,4 +1606,73 @@ hr {
 
 .success h3 {
     font-size: 2.5rem;
+}
+
+.underlinebox,
+.bwunderlinebox {
+    text-align: center;
+    position: relative;
+}
+
+.underlinebox:after,
+.bwunderlinebox:after {
+    background: linear-gradient(to right, #000000 35%, #000000 35%, #034ea2 35%, #034ea2 60%, #034ea2 100%, #034ea2 100%);
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -4px;
+}
+
+.underlinebox:after {
+    width: 35%;
+}
+
+.bwunderlinebox:after {
+    width: 20%;
+}
+
+.wunderlinebox,
+.swunderlinebox {
+    text-align: center;
+    position: relative;
+}
+
+.wunderlinebox:after,
+.swunderlinebox:after {
+    background: linear-gradient(to right, #000000 35%, #000000 35%, #ffffff 35%, #ffffff 60%, #ffffff 100%, #ffffff 100%);
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -4px;
+}
+
+.wunderlinebox:after {
+    width: 35%;
+}
+
+.swunderlinebox:after {
+    width: 20%;
+}
+
+.white-underlinebox {
+    text-align: center;
+    position: relative;
+}
+
+.white-underlinebox:after {
+    background: linear-gradient(to right, #034ea2 25%, #034ea2 37%, #ffffff 37%, #ffffff 45%, #000000 45%, #000000 55%, #ffffff 55%, #ffffff 62%, #034ea2 62%, #034ea2 100%);
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -4px;
+    width: 100%;
 }

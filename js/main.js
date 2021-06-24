@@ -6,8 +6,9 @@
     if( ! $('#mainNav').hasClass('navbar-reduce')) {
       $('#mainNav').addClass('navbar-reduce');
     }
-  })
-	AOS.init();  
+  });
+
+  //AOS.init();
 
   // Preloader
   $(window).on('load', function () {
@@ -125,49 +126,49 @@
 	=============================================== */
 
 
-	$(function () {
-		jQuery.validator.addMethod("mobile", function (phone_number, element) {
-			phone_number = phone_number.replace(/\s+/g, "");
-			return this.optional(element) || phone_number.length > 9 &&
-				phone_number.match(/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/);
-		}, "<br />Please specify a valid mobile number");
+	// $(function () {
+	// 	jQuery.validator.addMethod("mobile", function (phone_number, element) {
+	// 		phone_number = phone_number.replace(/\s+/g, "");
+	// 		return this.optional(element) || phone_number.length > 9 &&
+	// 			phone_number.match(/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/);
+	// 	}, "<br />Please specify a valid mobile number");
 
-		$("form[name='contact-form']").validate({
+	// 	$("form[name='contact-form']").validate({
 
-			rules: {
-				fullname: "required",
-				mobile: {
-					required: true,
+	// 		rules: {
+	// 			fullname: "required",
+	// 			mobile: {
+	// 				required: true,
 
-					mobile: true
-				},
-				company: "required",
-				email: {
-					required: true,
-					email: true
-				},
-				comments: {
-					required: true,
-					minlength: 2
-				}
-			},
-			messages: {
-				fullname: "Please enter your name",
-				company: "Please enter your company name",
-				mobile: {
-					required: "Please enter your mobile number",
-				},
-				comments: {
-					required: "Please provide a your message",
-					minlength: "Your message must be at least 2 characters long"
-				},
-				email: "Please enter a valid email address"
-			},
-			submitHandler: function (form) {
-				form.submit();
-			}
-		});
-	});
+	// 				mobile: true
+	// 			},
+	// 			company: "required",
+	// 			email: {
+	// 				required: true,
+	// 				email: true
+	// 			},
+	// 			comments: {
+	// 				required: true,
+	// 				minlength: 2
+	// 			}
+	// 		},
+	// 		messages: {
+	// 			fullname: "Please enter your name",
+	// 			company: "Please enter your company name",
+	// 			mobile: {
+	// 				required: "Please enter your mobile number",
+	// 			},
+	// 			comments: {
+	// 				required: "Please provide a your message",
+	// 				minlength: "Your message must be at least 2 characters long"
+	// 			},
+	// 			email: "Please enter a valid email address"
+	// 		},
+	// 		submitHandler: function (form) {
+	// 			form.submit();
+	// 		}
+	// 	});
+	// });
 
 
 
