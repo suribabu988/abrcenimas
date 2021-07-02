@@ -91,6 +91,27 @@
 		} else {
 			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
 		}
+
+		if ($(window).scrollTop() > pixels) {
+			$('.navbar-expand-lg.subpage').addClass('navbar-reduce');
+			$('.navbar-expand-lg.subpage').removeClass('navbar-trans');
+			$('.navbar-expand-lg.subpage .container .navbar-brand img').css('width', '54px');
+			$('.navbar-expand-lg.subpage .logow').css('padding', '0');
+
+		} else {
+			$('.navbar-expand-lg.subpage').addClass('navbar-trans');
+			$('.navbar-expand-lg.subpage').removeClass('navbar-reduce');
+			$('.navbar-expand-lg.subpage .container .navbar-brand img').css('width', '100px');
+			$('.navbar-expand-lg.subpage .logow').css('padding', '20px 5px 10px 5px');
+		}
+		if ($(window).scrollTop() > top) {
+			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
+		} else {
+			$('.scrolltop-mf').fadeOut(1000, "easeInOutExpo");
+		}
+		
+	
+	
 	});
 
 	$(document).ready(function () {
@@ -121,54 +142,64 @@
 		});
 	});
 
+	$(document).ready(function () {
+		$('.services-content').addClass('hide');
+		$('.services-content[data-content="retailing"]').removeClass('hide').addClass('show');
+		$('.gray-shadow-box').click(function(){
+		var servicesName = $(this).attr("data-service");
+		//var serviceContent = $('.services-content').attr('data-content');
+			$('.services-content').addClass('hide').removeClass('show');
+			$('.services-content[data-content = "'+servicesName+'"]').addClass('show').removeClass('hide');
+			
+	});
+
+	});
 	/* ==============================================
 	   CONTACT FORM
 	=============================================== */
 
 
-	// $(function () {
-	// 	jQuery.validator.addMethod("mobile", function (phone_number, element) {
-	// 		phone_number = phone_number.replace(/\s+/g, "");
-	// 		return this.optional(element) || phone_number.length > 9 &&
-	// 			phone_number.match(/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/);
-	// 	}, "<br />Please specify a valid mobile number");
+	$(function () {
+		jQuery.validator.addMethod("phoneno", function (phone_number, element) {
+			phone_number = phone_number.replace(/\s+/g, "");
+			return this.optional(element) || phone_number.length > 9 &&
+				phone_number.match(/^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/);
+		}, "<br />Please specify a valid phone number");
 
-	// 	$("form[name='contact-form']").validate({
+		$("form[name='contact-form']").validate({
 
-	// 		rules: {
-	// 			fullname: "required",
-	// 			mobile: {
-	// 				required: true,
+			rules: {
+				your_name: "required",
+				phone: {
+					required: true,
 
-	// 				mobile: true
-	// 			},
-	// 			company: "required",
-	// 			email: {
-	// 				required: true,
-	// 				email: true
-	// 			},
-	// 			comments: {
-	// 				required: true,
-	// 				minlength: 2
-	// 			}
-	// 		},
-	// 		messages: {
-	// 			fullname: "Please enter your name",
-	// 			company: "Please enter your company name",
-	// 			mobile: {
-	// 				required: "Please enter your mobile number",
-	// 			},
-	// 			comments: {
-	// 				required: "Please provide a your message",
-	// 				minlength: "Your message must be at least 2 characters long"
-	// 			},
-	// 			email: "Please enter a valid email address"
-	// 		},
-	// 		submitHandler: function (form) {
-	// 			form.submit();
-	// 		}
-	// 	});
-	// });
+					phoneno: true
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				comments: {
+					required: true,
+					minlength: 2
+				}
+			},
+			messages: {
+				your_name: "Please enter your name",
+				phone: {
+					required: "Please enter your phone number",
+				},
+				comments: {
+					required: "Please provide a your message",
+					minlength: "Your message must be at least 2 characters long"
+				},
+				email: "Please enter a valid email address"
+			},
+			submitHandler: function (form) {
+				form.submit();
+			}
+		});
+	});
 
 
 

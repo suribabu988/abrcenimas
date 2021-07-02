@@ -2,8 +2,8 @@
 if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "flow3.in@gmail.com";
-    $email_subject = "Flow3 Contact Message";
+    $email_to = "";
+    $email_subject = "RainTree Contact Message";
  
     function died($error) {
         // your error code can go here
@@ -16,20 +16,18 @@ if(isset($_POST['email'])) {
  
  
     // validation expected data exists
-    if(!isset($_POST['fullname']) ||
-        !isset($_POST['company']) ||
+    if(!isset($_POST['your_name']) ||
         !isset($_POST['email']) ||
-        !isset($_POST['mobile']) ||
+        !isset($_POST['phone']) ||
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
     }
  
      
  
-    $full_name = $_POST['fullname']; // required
-    $company_name = $_POST['company']; // required
+    $your_name = $_POST['your_name']; // required
     $email_from = $_POST['email']; // required
-    $mobile = $_POST['mobile']; // not required
+    $phone = $_POST['phone']; // not required
     $comments = $_POST['comments']; // required
  
     $error_message = "";
@@ -64,10 +62,9 @@ if(isset($_POST['email'])) {
  
      
  
-    $email_message .= "Full Name: ".clean_string($your_name)."\n";
-    $email_message .= "Company Name: ".clean_string($company_name)."\n";
+    $email_message .= "Your Name: ".clean_string($your_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Mobile: ".clean_string($phone)."\n";
+    $email_message .= "Phone: ".clean_string($phone)."\n";
     $email_message .= "Message: ".clean_string($comments)."\n";
     // return $email_message;
     
