@@ -1871,3 +1871,22 @@ hr {
 .protpolio {
     padding: 15px !important;
 }
+
+#home {
+    height: 100vh;
+}
+
+@media (min-width: 220px) and (max-width: 761px) {
+    #home {
+        height: 500px;
+    }
+
+    /* .navbar-b,
+    .navbar-b.navbar-trans {
+        padding: 50px 0px;
+    }
+
+    .navbar-b.navbar-reduce {
+        padding: 10px 0px;
+    } */
+}
