@@ -173,7 +173,7 @@ a:hover {
 
 /* logo */
 .logow {
-    width: 81px;
+    width: 100px;
     height: auto;
 }
 
@@ -238,7 +238,7 @@ a:hover {
 
 
 .navbar-b {
-    transition: all .5s ease-in-out;
+    transition: all .15s ease-in-out;
     background-color: transparent;
     padding-top: 0;
     padding-bottom: 0;
@@ -256,7 +256,7 @@ a:hover {
 
 .navbar-expand-lg .navbar-collapse {
     background: #000000;
-    padding: 8.5px 0;
+    padding: 14px 14px;
 }
 
 .navbar-expand-lg .navbar-collapse.subpage-nav {
@@ -385,7 +385,7 @@ a:hover {
 }
 
 .navbar-b.navbar-reduce {
-    transition: all .5s ease-in-out;
+    transition: all .15s ease-in-out;
     /* background-color: rgb(34 34 34); */
     /* padding-top: 2px;
     padding-bottom: 2px; */
