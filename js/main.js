@@ -79,12 +79,14 @@
 		if ($(window).scrollTop() > pixels) {
 			$('.navbar-expand-lg').addClass('navbar-reduce');
 			$('.navbar-expand-lg').removeClass('navbar-trans');
-			$('.navbar-expand-lg .container .navbar-brand img').css('width', '100px');
+			$('.navbar-expand-lg .container .navbar-brand img').css('width', '90px');
+			$('.navbar-expand-lg .navbar-collapse').css('padding', '11px 14px');
 
 		} else {
 			$('.navbar-expand-lg').addClass('navbar-trans');
 			$('.navbar-expand-lg').removeClass('navbar-reduce');
-			$('.navbar-expand-lg .container .navbar-brand img').css('width', '100px');
+			$('.navbar-expand-lg .container .navbar-brand img').css('width', '110px');
+			$('.navbar-expand-lg .navbar-collapse').css('padding', '17px 17px');
 		}
 		if ($(window).scrollTop() > top) {
 			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
