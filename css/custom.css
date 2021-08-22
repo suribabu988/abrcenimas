@@ -1,0 +1,41 @@
+html,
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+/* navigation 
+ - show navigation always on the large screen devices with (min-width:1024)
+*/
+/*======================================
+//--//-->   INTRO
+======================================*/
+.no-js .owl-carousel, .owl-carousel.owl-loaded{
+	position: relative;
+	margin-top: 0;
+}
+header > .navbar-reduce{
+	background:#000000;
+	padding:0;
+	margin:0;
+}
+.text-gradient {
+  background: linear-gradient(#EB7834, #F7AF59);
+  background: -webkit-linear-gradient(#EB7834, #F7AF59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (min-width: 767px) {
+.no-js .owl-carousel, .owl-carousel.owl-loaded{
+	position: relative;
+	margin-top: -150px;
+	
+}
+}
+@media (min-width: 1024px) {
+  .top-navbar {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
