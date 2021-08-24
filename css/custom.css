@@ -3,34 +3,42 @@ body {
   font-family: "Rubik", sans-serif;
 }
 
-/* navigation 
- - show navigation always on the large screen devices with (min-width:1024)
-*/
 /*======================================
 //--//-->   INTRO
 ======================================*/
-.no-js .owl-carousel, .owl-carousel.owl-loaded{
-	position: relative;
-	margin-top: 0;
+.no-js .owl-carousel,
+.owl-carousel.owl-loaded {
+  position: relative;
+  margin-top: 0;
 }
-header > .navbar-reduce{
-	background:#000000;
-	padding:0;
-	margin:0;
+
+header>.navbar-reduce {
+  background: #000000;
+  padding: 0;
+  margin: 0;
 }
-.text-gradient {
-  background: linear-gradient(#EB7834, #F7AF59);
-  background: -webkit-linear-gradient(#EB7834, #F7AF59);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.top-navbar a:hover span,
+.top-navbar a.active span {
+  border: 0px;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, #EB7935 0%, #fba16c 50%, #f7ac4c 50%, #F9B45C 100%);
+  border-image-slice: 1;
+  color: white;
+  margin: auto;
+  text-decoration: none;
 }
+
 @media (min-width: 767px) {
-.no-js .owl-carousel, .owl-carousel.owl-loaded{
-	position: relative;
-	margin-top: -150px;
-	
+
+  .no-js .owl-carousel,
+  .owl-carousel.owl-loaded {
+    position: relative;
+    margin-top: -150px;
+
+  }
 }
-}
+
 @media (min-width: 1024px) {
   .top-navbar {
     display: -webkit-inline-box !important;
@@ -38,4 +46,5 @@ header > .navbar-reduce{
     display: inline-flex !important;
   }
 }
+
 /*# sourceMappingURL=style.css.map */
