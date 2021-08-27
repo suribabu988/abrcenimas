@@ -13,8 +13,8 @@ body {
 }
 
 header>.navbar-reduce {
-  background: #000000;
-  padding: 0;
+  background: #262626;
+  padding: 0 5px;
   margin: 0;
 }
 
@@ -22,7 +22,7 @@ header>.navbar-reduce {
 .top-navbar a.active span {
   border: 0px;
   border-bottom: 2px solid;
-  border-image: linear-gradient(to right, #EB7935 0%, #fba16c 50%, #f7ac4c 50%, #F9B45C 100%);
+  border-image: linear-gradient(to right, #EA7633 0%, #F19447 50%, #F19447 50%, #F8B15A 100%);
   border-image-slice: 1;
   color: white;
   margin: auto;
