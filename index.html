@@ -36,19 +36,19 @@
           class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
         >
           <a
-            href="index.html"
+            href="#"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center active"
           >
             <span class="uppercase text-base font-thin">Home</span>
           </a>
           <a
-            href="#"
+            href="https://in.bookmyshow.com/gudivada/cinemas/abr-cinemas-the-next-gudivada/ABRN"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
           >
             <span class="uppercase text-base font-thin">BOOK TICKETS</span>
           </a>
           <a
-            href="#"
+            href="contact.html"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
           >
             <span class="uppercase text-base font-thin">CONTACT</span>
@@ -70,11 +70,17 @@
 <div class="grid-cols-6 text-xl md:text-2xl uppercase py-2">Select theater</div>
 <div class="grid-cols-6 py-2">
 <div class="flex justify-center">
-    <input class="w-full md:w-60 lg:w-80 rounded-2xl py-1 bg-opacity-0 border-transparent focus:outline-none focus:ring-2 focus:ring-secondary" type="text" >
-    <!-- <button class="bg-white w-auto flex justify-end items-center text-blue-500 p-2 hover:text-blue-400"> -->
-        <!-- <i class="material-icons">search</i> -->
-    <!-- </button> -->
-</div></div>
+    <!-- <input class="w-full md:w-60 lg:w-80 rounded-2xl py-1 bg-opacity-0 border-transparent focus:outline-none focus:ring-2 focus:ring-secondary" type="text" > -->
+
+<div class="inline-block relative w-64">
+  <select id="theaters"
+    class="block appearance-none w-full md:w-60 lg:w-80 rounded-2xl py-1 bg-opacity-0 border-transparent focus:outline-none focus:ring-2 focus:ring-secondary capitalize">
+    <option>Select Theater</option>
+  </select>
+ </div>
+
+  </div>
+</div>
 </div>
 </div>
 </section>
@@ -86,11 +92,11 @@
 <h2 class="text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third">Now Showing</h2>
 </div>
 </div>
-<div class="pl-2 pr-2 pt-8 pb-16 grid grid-rows-1 md:grid-flow-col gap-4 justify-between">
-<div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/pushpa.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div>
+<div id="movieposters" class="pl-2 pr-2 pt-8 pb-16 grid grid-rows-1 md:grid-flow-col gap-4 justify-between">
+<!-- <div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/pushpa.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div>
 <div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/radheshyam.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div>
 <div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/pushpa.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div>
-<div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/radheshyam.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div>
+<div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="images/radheshyam.jpg" class="rounded-3xl w-100 md:w-52" alt="" /></div> -->
 </div>
 </div>
 </section>
@@ -182,10 +188,12 @@ it to make a type specimen book. It has survived not<br/><a href="" class="text-
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/jquery-migrate.min.js"></script>
 	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="./js/tailwindcss-jit-cdn.umd.min.js"></script>
+  <script src="./js/tailwindcss-jit-cdn.umd.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
 
-    <script src="./js/custom.js"></script>
-<script type="tailwind-config">
+  <script src="./js/custom.js"></script>
+  
+  <script type="tailwind-config">
 {
     theme: {
         extend: {
