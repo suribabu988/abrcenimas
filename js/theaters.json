@@ -1,66 +1,54 @@
 {
     "gudivada": [
         {
-            "order": "1",
             "movie": "pushpa",
             "poster":"../images/pushpa.jpg"
         },
         {
-            "order": "2",
             "movie": "radhe shyam",
             "poster": "../images/radheshyam.jpg"
         },
         {
-            "order": "3",
             "movie": "acharya",
             "poster": "../images/pushpa.jpg"
         },
         {
-            "order": "4",
             "movie": "RRR",
             "poster": "../images/pushpa.jpg"
         }
     ],
     "nizamabad": [
         {
-            "order": "1",
             "movie": "pushpa",
             "poster": "../images/pushpa.jpg"
         },
         {
-            "order": "2",
             "movie": "radhe shyam",
             "poster": "../images/radheshyam.jpg"
         },
         {
-            "order": "3",
             "movie": "acharya",
             "poster": "../images/pushpa.jpg"
         },
         {
-            "order": "4",
             "movie": "RRR",
             "poster": "../images/radheshyam.jpg"
         }
     ],
     "guntur": [
         {
-            "order": "1",
             "movie": "pushpa",
             "poster": "../images/pushpa.jpg"
         },
         {
-            "order": "2",
             "movie": "radhe shyam",
             "poster": "../images/radheshyam.jpg"
         },
         {
-            "order": "3",
             "movie": "acharya",
             "poster": "../images/pushpa.jpg"
         },
         {
-            "order": "4",
             "movie": "RRR",
             "poster": "../images/radheshyam.jpg"
         }

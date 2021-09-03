@@ -94,45 +94,33 @@ owl.owlCarousel({
 
 //Theaters
 	$.getJSON("./js/theaters.json", function (data) {
-		var theatersArray = [];
-		var moviesArray = [];
+		
+		$.each(data, function (key, v) {
+			var $theaters;
+			var $theatersList = $('#theaters');
+			var $moviePosters = $('#movieposters');
+			$theatersList.append('<option class="capitalize">' + key + '</option>');
 
-		$.each(data, function (key, val) {
-			var theater = key;
-			if ($.inArray(theater, theatersArray) == -1) {
-				theatersArray.push(theater);
+			for (var items in v) {
+				$theaters = key;
+				var movie_items = v[items];
+				$moviePosters.append('<div class="posters p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl" data-theater="' + $theaters + '"><img src="' + movie_items.poster + '" class="rounded-3xl w-100 md:w-52" alt="poster" /></div>');
+				$('.posters').addClass('hidden');
+				$('.posters[data-theater="gudivada"]').removeClass('hidden').addClass('block');	
 			}
-
-			for (var items in val) {
-				var movie_items = val[items];
-				if ($.inArray(movie_items, moviesArray) == -1) {
-					moviesArray.push(movie_items);
-				}
-			}
-
-		});
-
-		var $theatersList = $('#theaters');
-		var $moviePosters = $('#movieposters');
-
-		$.each(theatersArray, function (i) {
-			var getTheaters = theatersArray[i];
-			var putTheaters = getTheaters.split('_').join(' ');
-
-			$theatersList.append('<option class="capitalize">' + putTheaters + '</option>');
-		});
-
-
-		$.each(moviesArray, function (i, v) {
-			var movieposter = moviesArray[i].poster;
-			var random_num = Math.floor((Math.random() * 2));
-			if(i<=3){
-				$moviePosters.append('<div class="p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl"><img src="' + moviesArray[random_num].poster + '" class="rounded-3xl w-100 md:w-52" alt="poster" /></div>');
-			}
-		});
-
+			$("select#theaters").change(function () {
+				var selectedTheater = $(this).children("option:selected").val();
+				$('.posters').addClass('hidden');
+				var dataPosters = $('.posters[data-theater=' + selectedTheater + ']').removeClass('hidden').addClass('block');
+				
+			});
 	});
-  
+
+
+
+
+});
+
 });
 
 
