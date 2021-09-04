@@ -2,55 +2,55 @@
     "gudivada": [
         {
             "movie": "pushpa",
-            "poster":"../images/pushpa.jpg"
+            "poster":"./images/pushpa.jpg"
         },
         {
             "movie": "radhe shyam",
-            "poster": "../images/radheshyam.jpg"
+            "poster": "./images/radheshyam.jpg"
         },
         {
             "movie": "acharya",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         },
         {
             "movie": "RRR",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         }
     ],
     "nizamabad": [
         {
             "movie": "pushpa",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         },
         {
             "movie": "radhe shyam",
-            "poster": "../images/radheshyam.jpg"
+            "poster": "./images/radheshyam.jpg"
         },
         {
             "movie": "acharya",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         },
         {
             "movie": "RRR",
-            "poster": "../images/radheshyam.jpg"
+            "poster": "./images/radheshyam.jpg"
         }
     ],
     "guntur": [
         {
             "movie": "pushpa",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         },
         {
             "movie": "radhe shyam",
-            "poster": "../images/radheshyam.jpg"
+            "poster": "./images/radheshyam.jpg"
         },
         {
             "movie": "acharya",
-            "poster": "../images/pushpa.jpg"
+            "poster": "./images/pushpa.jpg"
         },
         {
             "movie": "RRR",
-            "poster": "../images/radheshyam.jpg"
+            "poster": "./images/radheshyam.jpg"
         }
     ]
 }
