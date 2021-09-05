@@ -29,6 +29,10 @@ header>.navbar-reduce {
   text-decoration: none;
 }
 
+.error{
+  color: red;
+}
+
 @media (min-width: 767px) {
 
   .no-js .owl-carousel,
