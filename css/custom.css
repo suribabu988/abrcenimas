@@ -34,7 +34,8 @@ header>.navbar-reduce {
 }
 
 .owl-carousel .owl-item img {
-  height: 75vh;
+  max-height: 75vh;
+  height: auto;
 }
 
 .owl-theme .owl-nav.disabled+.owl-dots {
@@ -98,7 +99,7 @@ header>.navbar-reduce {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #000000;
+  background: #ffffff;
 }
 
 #loader img {
@@ -129,4 +130,10 @@ header>.navbar-reduce {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+@media (min-width: 767px) {
+  .owl-carousel .owl-item img {
+    min-height: 250px;
+    height: auto;
+  }
+}
+  /*# sourceMappingURL=style.css.map */
