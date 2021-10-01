@@ -8,7 +8,7 @@
 	
     <link rel="stylesheet" href="css/material-icons.min.css" />
     <link rel="stylesheet" href="css/tailwind.css" />
-
+    <link href="lib/animate/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" />
 
     <link rel="stylesheet" href="lib/owlcarousel/assets/owl.theme.default.min.css" />
@@ -16,11 +16,11 @@
     <link rel="stylesheet" href="css/custom.css" />
   </head>
 
-  <body class="overflow-x-hidden">
+<body class="overflow-x-hidden">
 <header class="sticky top-0 z-50 m-0">
   <nav class="navbar-custom flex items-center bg-siteblack md:bg-opacity-0 p-3 flex-wrap">
       <a href="index.html" class="p-2 mr-4 inline-flex items-center">
-	  <img src="images/logo.png" alt="logo" class="w-20 md:w-32"/>
+	  <img src="images/abr-logo-white.svg" alt="logo" class="w-20 md:w-32"/>
       </a>
       <button
         class="text-white inline-flex p-2 mx-2 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
@@ -36,23 +36,23 @@
           class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto"
         >
           <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center active"
+            href="#home"
+            class="js-scroll lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center active"
           >
             <span class="uppercase text-base font-thin">Home</span>
           </a>
           <a
             href="https://in.bookmyshow.com/gudivada/cinemas/abr-cinemas-the-next-gudivada/ABRN"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
+            class="js-scroll lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
           >
             <span class="uppercase text-base font-thin">BOOK TICKETS</span>
           </a>
-          <a href="about.html" class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
+          <a href="#about" class="js-scroll lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
             <span class="uppercase text-base font-thin">ABOUT</span>
           </a>
           <a
             href="contact.html"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
+            class="js-scroll lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center"
           >
             <span class="uppercase text-base font-thin">CONTACT</span>
           </a>
@@ -60,11 +60,21 @@
       </div>
     </nav>
 </header>	
-<div class="owl-carousel owl-theme">
-    <div class="item"><img src="images/slider1.jpeg"></div>
-    <div class="item"><img src="images/sreekaram.jpeg"></div>
-    <div class="item"><img src="images/slider1.jpeg"></div>
-    <div class="item"><img src="images/sreekaram.jpeg"></div>
+<div id="home" class="owl-carousel owl-theme">
+    <div class="item">
+      <div class="overlay-itro"></div>
+      <img src="images/slider1.jpg">
+    </div>
+    <div class="item">
+      <div class="overlay-itro"></div>
+       <img src="images/slider2.jpg">
+    </div>
+    <div class="item">
+      <div class="overlay-itro"></div>
+      <img src="images/slider3.jpg"></div>
+    <div class="item">
+      <div class="overlay-itro"></div>
+      <img src="images/slider4.jpg"></div>
 </div>
 
 <section class="bg-gradient-to-r from-primary via-secondary to-third">
@@ -88,7 +98,7 @@
 <div class="py-8 container mx-auto px-2">
 <div class="pt-4 pb-2 grid grid-rows-1 grid-flow-col gap-4 justify-between">
 <div class="col">
-<h2 class="text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third">Now Showing</h2>
+<h2 class="text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">Now Showing</h2>
 </div>
 </div>
 <div id="movieposters" class="pl-2 pr-2 pt-8 pb-16 grid grid-rows-1 md:grid-flow-col gap-4 justify-between">
@@ -99,9 +109,9 @@
 <section class="py-16 bg-gradient-to-r from-primary via-secondary to-third">
 <div class="container mx-auto px-2">
 <div class="grid grid-rows-1 grid-cols-1 gap-1 flex justify-center">
-<div class="w-full md:w-1/2 m-auto bg-gradient-to-r from-primary via-secondary to-third p-2 shadow-lg">
+<div class="w-full md:w-1/2 m-auto bg-gradient-to-r from-primary via-secondary to-third p-2 shadow-lg" >
 <iframe title="ABR Cinemas" height="350px" class="embed-responsive-item w-full"
-  src="https://www.youtube.com/embed/Lk2oDvoonUc?autoplay=1&showinfo=0&controls=0&autohide=1"
+data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1"  src="https://www.youtube.com/embed/Lk2oDvoonUc?autoplay=1&showinfo=0&controls=0&autohide=1"
   allow="autoplay; encrypted-media"></iframe>
   <!-- <video controls autoplay="autoplay" loop="true" muted id="cartoonVideo" class="w-full h-1/3" poster="images/poster.png">
 				<source src="videos/dino.mp4" type="video/mp4">
@@ -111,7 +121,7 @@
 </div>
 <div class="grid grid-rows-1 grid-flow-col gap-1 flex justify-center">
 
-<div class="text-2xl md:text-5xl h-12 text-white text-center w-full font-thin">experience cinema like never before</div>
+<div class="text-2xl md:text-5xl h-12 text-white text-center w-full font-thin" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">experience cinema like never before</div>
 </div>
 </div>
 </section>
@@ -121,20 +131,20 @@
 <div class="container mx-auto px-2">
 <div class="pt-4 pb-2 grid grid-rows-1 grid-flow-col gap-4 justify-between">
 <div class="mx-auto">
-<h2 class="text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-800 to-yellow-600">locations</h2>
+<h2 class="text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-800 to-yellow-600" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">locations</h2>
 </div>
 </div>
 <div class="pt-4 pb-2 grid grid-col-1 md:grid-flow-col gap-1 justify-center md:justify-between">
 
-<div class="mx-auto">
+<div class="mx-auto" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
 <img src="images/location1.jpg" class="w-80" alt="" />
 				<p class="text-2xl pt-2 text-white uppercase">NEXT - GUDIVADA</p>
 </div>
-<div class="mx-auto">
+<div class="mx-auto" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
 <img src="images/location2.jpg" class="w-80" alt="" />
 				<p class="text-2xl pt-2 text-white uppercase">SILVER - NIZAMABAD</p>
 </div>
-<div class="mx-auto">
+<div class="mx-auto" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
 <img src="images/location3.jpg" class="w-80" alt="" />
 				<p class="text-2xl pt-2 text-white uppercase">SAVOY - GUNTUR</p>
 </div>
@@ -143,14 +153,16 @@
 </div>
 <div class="py-16 grid grid-rows-1 grid-cols-1 md:grid-cols-2 gap-1 justify-between">
 	<div class="mx-auto m-auto">
-		<p class="text-white text-justify">With Covid-19 preventive protocol announced by the state governments, cinemas will open up gradually phase wise as a
+<h2 id="about" class="text-2xl uppercase pb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
+  About</h2>
+		<p class="text-white text-justify" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">With Covid-19 preventive protocol announced by the state governments, cinemas will open up gradually phase wise as a
     cautious measure, till further intimation. Meanwhile, abr cinemas offers you international standards of movie watching
     experience, entailed with the best of services. Let us wait till the curtains raise regularly, bringing an end to this
-    lockdown period.<br/><a href="about.html" class="text-gradient">more . .</a>
+    lockdown period.<br/><a href="about.html" class="bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third">more . .</a>
 		</p>
 	</div>
 			<div class="logo-img text-center m-auto mx-auto">
-				<img src="images/logo.png" class="" alt="logo" />
+				<img src="images/logo.png" class="test" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1" alt="logo" />
 			</div>
 </div>
 </div>
@@ -181,9 +193,14 @@
 </div>
 </div>
 </footer>
-
+<div id="loader">
+  <img src="images/abr-cinemas-logo-reveal.gif" />
+</div>
 	<script src="./js/jquery.min.js"></script>
-	<script src="./js/jquery-migrate.min.js"></script>
+  <script src="./js/jquery-migrate.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/animate/aos.js"></script>
 	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="./js/tailwindcss-jit-cdn.umd.min.js"></script>
     <script src="./js/jquery.validate.min.js"></script>

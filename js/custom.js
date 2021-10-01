@@ -8,6 +8,9 @@ $(document).ready(function () {
     });
   });
   
+	AOS.init();
+
+
   	$(window).trigger('scroll');
 	$(window).on('scroll', function () {
 		var pixels = 50; 
@@ -24,6 +27,19 @@ $(document).ready(function () {
 			$('.navbar-custom img').removeClass('md:w-20 w-20');
 			$('.navbar-custom img').addClass('md:w-32 w-20');
 		}
+		if ($(window).scrollTop() > pixels) {
+			$('.navbar-contact').addClass('navbar-reduce');
+			$('.navbar-contact').removeClass('navbar-trans');
+			$('.navbar-contact img').removeClass('md:w-16 w-16');
+			$('.navbar-contact img').addClass('md:w-12 w-12');
+
+		} else {
+			$('.navbar-contact').addClass('navbar-trans');
+			$('.navbar-contact').removeClass('navbar-reduce');
+			$('.navbar-contact img').removeClass('md:w-12 w-12');
+			$('.navbar-contact img').addClass('md:w-16 w-16');
+		}
+
 		if ($(window).scrollTop() > top) {
 			$('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
 		} else {
@@ -36,12 +52,41 @@ $(document).ready(function () {
 owl.owlCarousel({
     items:1,
     loop:true,
-    dots: false,
+    dots: true,
 	margin:10,
     autoplay:true,
     autoplayTimeout:3000,
-    autoplayHoverPause:true
+	autoplayHoverPause:true,
+	nav:false
 });
+
+	var nav = $('nav');
+	var navHeight = nav.outerHeight();
+
+	// Preloader
+
+	$(window).on('load', function () {
+		if ($('#loader').length) {
+			$('#loader').delay(500).fadeOut("slow", function () {
+				$(this).remove();
+			});
+		}
+	});
+
+
+	/*--/ Star Scrolling nav /--*/
+	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html, body').animate({
+					scrollTop: (target.offset().top - navHeight + 5)
+				}, 1000, "easeInOutExpo");
+				return false;
+			}
+		}
+	});
 
 
 	/* ==============================================
@@ -104,7 +149,7 @@ owl.owlCarousel({
 			for (var items in v) {
 				$theaters = key;
 				var movie_items = v[items];
-				$moviePosters.append('<div class="posters p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl" data-theater="' + $theaters + '"><img src="' + movie_items.poster + '" class="rounded-3xl w-100 md:w-52" alt="poster" /></div>');
+				$moviePosters.append('<div class="posters p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1" data-theater="' + $theaters + '"><img src="' + movie_items.poster + '" class="rounded-3xl w-100 md:w-52" alt="poster" /></div>');
 				$('.posters').addClass('hidden');
 				$('.posters[data-theater="gudivada"]').removeClass('hidden').addClass('block');	
 			}
