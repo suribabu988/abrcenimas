@@ -134,6 +134,40 @@ owl.owlCarousel({
 				form.submit();
 			}
 		});
+
+		$("form[name='bulk-form']").validate({
+
+			rules: {
+				name: "required",
+				guests: "required",
+				date: "required",
+				movie: "required",
+				mobile: {
+					required: true,
+
+					mobile: true
+				},
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				name: "Please enter your name",
+				guests: "Please enter number of guests",
+				date: "Please enter date & time",
+				movie: "Please enter movie name",
+				mobile: {
+					required: "Please enter your mobile number",
+				},
+				email: "Please enter a valid email address"
+			},
+			submitHandler: function (form) {
+				form.submit();
+			}
+		});
+
+
 	});
 
 
@@ -141,30 +175,111 @@ owl.owlCarousel({
 	$.getJSON("./js/theaters.json", function (data) {
 		
 		$.each(data, function (key, v) {
+			
 			var $theaters;
 			var $theatersList = $('#theaters');
 			var $moviePosters = $('#movieposters');
 			$theatersList.append('<option class="capitalize">' + key + '</option>');
 
-			for (var items in v) {
-				$theaters = key;
-				var movie_items = v[items];
-				$moviePosters.append('<div class="posters p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1" data-theater="' + $theaters + '"><img src="' + movie_items.poster + '" class="rounded-3xl w-100 md:w-52" alt="poster" /></div>');
-				$('.posters').addClass('hidden');
-				$('.posters[data-theater="gudivada"]').removeClass('hidden').addClass('block');	
-			}
 			$("select#theaters").change(function () {
 				var selectedTheater = $(this).children("option:selected").val();
 				$('.posters').addClass('hidden');
+				if ($("#theaters option:selected").val() == 'ALL'){
+					$('.posters').removeClass('hidden').addClass('block');
+				};
 				var dataPosters = $('.posters[data-theater=' + selectedTheater + ']').removeClass('hidden').addClass('block');
-				
+
 			});
-	});
 
+			$('.posters a').first().addClass('first');
+			$('.posters a').last().addClass('last');
+			for (var items in v) {
+				console.log(v[items].poster);
+				$theaters = key;
+				var movie_items = v[items];
+				$moviePosters.append('<div class="posters p-2 bg-gradient-to-r from-primary via-secondary to-third rounded-3xl" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1" data-theater="' + $theaters + '"><a href="#videoModal" rel="modal:open" data-title="' + movie_items.movie +'" data-videoid="'+movie_items.video+'"><img src="' + movie_items.poster + '" class="rounded-3xl w-full" alt="poster" /></a></div>');
+				var dataPosters = $('.posters[data-theater]').removeClass('hidden').addClass('block');
+				
+				
+			$('.posters a').on('click', function () {	
+				var $this = $(this);	
+				var $videoClass = $this.attr('class');
+				var videos_id = $this.attr('data-videoid');
+					var $videoTitle = $this.attr('data-title');
+					//var videos_id = $imgHref.split('v=')[1];
+					// var ampersandPosition = videos_id.indexOf('&');
+					// if (ampersandPosition != -1) {
+					// 	videos_id = videos_id.substring(0, ampersandPosition);
+					// }
+				var $videoModal = $('#videoModal');
+				
+				$videoModal.html('<h2 class="video-title text-2xl uppercase pb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-third">' + $videoTitle + '</h2>'+
+					'<iframe id="videoFrame" class="w-full h-80  min-h-32" title="' + movie_items.movie + '"  src = "https://www.youtube.com/embed/'+videos_id+'?autoplay=1&showinfo=0&controls=0&autohide=1" allow = "autoplay; encrypted-media" >'+
+			'</iframe >'+
+			'<a class="prev" id="prev-video-btn">&#10094;</a>'+
+		    '<a class="next" id="next-video-btn">&#10095;</a>');
+				$('#videoModal').removeClass('hidemodal').addClass('showmodal');
 
+					// next click logic
+					$('#next-video-btn').on('click', function () {
+						var $next = $this.parent('.posters').next('.posters').find('a').attr('data-videoid');
+						var $nextVideoTitle = $this.parent('.posters').next('.posters').find('a').attr('data-title');
+						var $nextVideoClass = $this.parent('.posters').next('.posters').find('a').attr('class');
+						var video_nextid = $next;
+						// var ampersandPosition = video_nextid.indexOf('&');
+						// if (ampersandPosition != -1) {
+						// 	video_nextid = video_nextid.substring(0, ampersandPosition);
+						// }
+						$this = $this.parent('.posters').next('.posters').find('a');
+						$('#videoModal h2.video-title').html($nextVideoTitle);
+						$('#videoModal iframe').addClass($nextVideoClass);
+						$('#videoModal iframe').attr('src', 'https://www.youtube.com/embed/' + video_nextid + '?autoplay=1&showinfo=0&controls=0&autohide=1');
+						if ($nextVideoClass == 'last') {
+							$(this).hide();
+							$('#prev-video-btn').show();
+						}
+						if ($nextVideoClass != 'last') {
+							$(this).show();
+							$('#prev-video-btn').show();
+						}
 
+					});
+
+					// prev click logic
+					$('#prev-video-btn').on('click', function () {
+						var $prev = $this.parent('.posters').prev('.posters').find('a').attr('data-videoid');
+						var video_previd = $prev;
+						// var ampersandPosition = video_previd.indexOf('&');
+						// if (ampersandPosition != -1) {
+						// 	video_previd = video_previd.substring(0, ampersandPosition);
+						// }
+						var $prevVideoTitle = $this.parent('.posters').prev('.posters').find('a').attr('data-title');
+						var $prevVideoClass = $this.parent('.posters').prev('.posters').find('a').attr('class');
+						
+						$this = $this.parent('.posters').prev('.posters').find('a');
+
+						$('#videoModal h2.video-title').html($prevVideoTitle);
+						$('#videoModal iframe').addClass($prevVideoClass);
+						$('#videoModal iframe').attr('src', 'https://www.youtube.com/embed/' + video_previd + '?autoplay=1&showinfo=0&controls=0&autohide=1');
+						if ($prevVideoClass == 'first') {
+							$(this).hide();
+							$('#next-video-btn').show();
+						}
+						if ($prevVideoClass != 'first') {
+							$(this).show();
+							$('#next-video-btn').show();
+						}
+
+					});
+
+			});
+
+}
 
 });
+
+});
+
 
 });
 

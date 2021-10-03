@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ABR CINEMAS</title>
+
+    <link rel="stylesheet" href="css/material-icons.min.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link href="lib/animate/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css" />
+
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/jquery.simple-dtpicker.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body class="overflow-x-hidden">
+    <header class="sticky top-0 z-50 m-0">
+        <nav class="navbar-contact flex items-center bg-siteblack md:bg-opacity-0 p-2 flex-wrap">
+            <a href="/" class="p-2 mr-2 inline-flex items-center">
+                <img src="images/abr-logo-white.svg" alt="logo" class="w-16 md:w-16" />
+            </a>
+            <button
+                class="text-white inline-flex p-2 mx-2 hover:bg-gray-900 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+                data-target="#navigation">
+                <i class="material-icons">menu</i>
+            </button>
+            <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+                <div
+                    class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+                    <a href="/"
+                        class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
+                        <span class="uppercase text-base font-thin">Home</span>
+                    </a>
+                    <a href="https://in.bookmyshow.com/gudivada/cinemas/abr-cinemas-the-next-gudivada/ABRN"
+                        class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
+                        <span class="uppercase text-base font-thin">BOOK TICKETS</span>
+                    </a>
+                    <a href="about.html"
+                        class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
+                        <span class="uppercase text-base font-thin">ABOUT</span>
+                    </a>
+        <a href="#"
+            class="js-scroll lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center active">
+            <span class="uppercase text-base font-thin">bulk & private screening</span>
+        </a>
+                    <a href="#"
+                        class="lg:inline-flex lg:w-auto w-full px-3 py-2 text-white items-center justify-center">
+                        <span class="uppercase text-base font-thin">CONTACT</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="bulk-banner">
+        <div class="overlay-itro"></div>
+        <img src="images/Private Screening Header Image.jpg" alt="" ></img>
+    </section>
+
+    <section class="bg-siteblack pt-16 pb-8">
+        <div class="container mx-auto px-2">
+            <div class="row">
+                    <form id="bulk-form" method="post" class="ml-auto mr-auto w-full max-w-lg" name="bulk-form"
+                        action="bulk_screening.php">
+                    <h2 class="text-white text-xl uppercase pb-6">Bulk & Private screening</h2>
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800"
+                            data-aos-offset="1">
+                            <div class="w-full px-3 md:mb-0">
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white"
+                                    name="name" id="name" type="text" placeholder="Name"
+                                    required="required">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
+                            <div class="w-full px-3 md:mb-0">
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white"
+                                    name="guests" id="guests" type="text" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Number Of Guests" required="required">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
+                            <div class="input-group date w-full px-3 md:mb-0" id='datetimepicker1'>
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white"
+                                    name="date" id="date" type="text"  value="" placeholder="Date & Time" required="required">
+                                   
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800" data-aos-offset="1">
+                            <div class="w-full px-3 md:mb-0">
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white"
+                                    name="movie" id="movie" type="text" placeholder="Movie" required="required">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800"
+                            data-aos-offset="1">
+                            <div class="w-full px-3">
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="mobile" name="mobile" type="text"  onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" placeholder="Mobile Number"
+                                    required="required">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-2" data-aos="fade-up" data-aos-duration="1800"
+                            data-aos-offset="1">
+                            <div class="w-full px-3">
+                                <input
+                                    class="appearance-none block w-full bg-white text-gray-700 border border-gray-200 py-2 px-2 mb-2 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    name="email" id="email" type="email" placeholder="Email"
+                                    required="required">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6" data-aos="fade-up" data-aos-duration="1800"
+                            data-aos-offset="1">
+                            <div class="md:w-2/3 px-3">
+                                <button id="submit"
+                                    class="uppercase block shadow font-bold py-2 px-4 text-white bg-third hover:bg-primary focus:shadow-outline focus:outline-none"
+                                    type="submit">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-gradient-to-r from-primary via-secondary to-third">
+        <div class="container mx-auto px-2">
+            <div class="grid grid-rows-1 md:grid-flow-col gap-4 md:gap-32 flex justify-start">
+
+                <div>
+                    <div class="text-2xl pb-4 text-white">GET IN TOUCH</div>
+                    <a href="" class="text-xl text-white">FAQ</a><br>
+                    <a href="" class="text-xl text-white">Share Feedback</a><br>
+                    <a href="" class="text-xl text-white">Contact Us</a>
+                </div>
+                <div>
+                    <div class="text-2xl pb-4 text-white">H.O</div>
+                    <p class="text-xl text-white">Abr Cinemas Vijayawada LLP<br>Second Level, Vaishnavi
+                        Cynosure<br>Block A & B, Nallagandla, Gachibowli<br>Hyderabad 500
+                        032 Telangana</p>
+                </div>
+                <div>
+                    <div class="text-2xl pb-4 text-white">CONNECT</div>
+                    <a href="" class="text-xl text-white">FACEBOOK</a><br>
+                    <a href="" class="text-xl text-white">TWITTER</a><br>
+                    <a href="" class="text-xl text-white">INSTAGRAM</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <div id="loader">
+        <img src="images/abr-cinemas-logo-reveal.gif" />
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-migrate.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/counterup/jquery.counterup.js"></script>
+    <script src="lib/animate/aos.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./js/tailwindcss-jit-cdn.umd.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.simple-dtpicker.js"></script>
+    <script src="./js/custom.js"></script>
+
+    <script type="tailwind-config">
+{
+    theme: {
+        extend: {
+            colors: {
+                'primary': '#EA7633',
+                'secondary': '#F19447',
+                'third':'#F8B15A',
+                'siteblack':'#262626'
+            }
+        }
+    }
+}
+</script>
+<script>
+    $(function () {
+        $('*[name=date]').appendDtpicker({
+            "autodateOnStart": false,
+        });
+        });
+</script>
+</body>
+
+</html>

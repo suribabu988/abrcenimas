@@ -47,7 +47,7 @@ header>.navbar-reduce {
   /* text-align: center; */
 }
 
-#home .overlay-itro {
+.overlay-itro {
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
   top: 0;
@@ -104,12 +104,47 @@ header>.navbar-reduce {
 
 #loader img {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
+  top: 40%;
+  left: 40%;
+  right: 40%;
+  bottom: 40%;
+  width: 300px;
   height: auto;
+}
+
+.bulk-banner {
+  position: relative;
+  margin-top: -100px;
+}
+
+#prev-video-btn {
+  position: absolute;
+  top: 45%;
+  bottom: 45%;
+  left: 5px;
+  font-size: 28px;
+}
+
+#next-video-btn {
+  position: absolute;
+  top: 45%;
+  bottom: 45%;
+  right: 5px;
+  font-size: 28px;
+}
+
+.datepicker>.datepicker_header>.icon-close>div {
+  width: 16px;
+  height: 16px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjExR/NCNwAAAfhJREFUSEvNVEtKA0EUHHBhsvZ7D0HF4PRMnERxI+hCQ4xuBE/g5yLRA+il/CCIXkDElRGt6qkZO91j1JUW1KJf1XvVn2Gif4XGUX986aRf0zIANXq0DBBv7Iwvb+192U+NHi2H0Tg+O2ycnN2DV+CcyiVQW5B2T6/KJUxr7dAkySN4bVbaiyqXMM1s3mr0wKtyDgytgQ/gu/gKbkumvgsOpJH0lieNN3s1O9iYd/EN657kyJikZ2uFDi97JDOgX8fAWyeg2MQO6IeT8Pbrao+Wtw/qJklvywBnE5ZuOAkve9SeA0PnQT+Ia7/2BoZXnK0uBkH5Oqxl4RNZYHAH9ANdMnxP9gA42X5FoMuhp6kEAnjlDPpVeIERm0B4+m0/N9AFq26Bta5sX0JvPvDCycFPTs+PbtQTUOvIHgAhu+DoJ4BH9mFgcAzyy3cDee3+c9ATq60ErjfDcP/kDPQ3hJtIM7XlwMAJ8FoBBe2bi/4m6J1QO34yrWlc740XxDffr/wm6EWP2u0GJsEnDS/DJVPvge7T0DspmT+aGQx+cUKGPriKTcCbzEhGwOn5GAZegM/gHdiSVAK1VBo9F+yRFJn2+hgGXtrBSXpn0mbQb5orbavl4ZfskZRDm5gGp1QKQM16nPACdhNpczZur3+ezAM1eoLwv0MUfQBkquZISGUUwgAAAABJRU5ErkJggg==);
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  padding: 8px;
+  top: 0;
+  right: 0;
 }
 
 @media (min-width: 767px) {
@@ -130,10 +165,20 @@ header>.navbar-reduce {
   }
 }
 
-@media (min-width: 767px) {
+@media (max-width: 767px) {
   .owl-carousel .owl-item img {
     min-height: 250px;
     height: auto;
   }
+
+  #loader img {
+    width: 150px;
+  }
+
+  .bulk-banner {
+    position: relative;
+    margin-top: 0;
+  }
 }
-  /*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */

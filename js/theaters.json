@@ -1,56 +1,58 @@
 {
     "gudivada": [
         {
-            "movie": "pushpa",
-            "poster":"./images/pushpa.jpg"
+            "movie": "Love Story",
+            "poster":"./images/lovestory.jpg",
+            "video":"1yH_eOxpkwo"
         },
         {
-            "movie": "radhe shyam",
-            "poster": "./images/radheshyam.jpg"
+            "movie": "Republic",
+            "poster": "./images/republic.jpg",
+            "video": "PcTU9HxbwuE"
         },
         {
-            "movie": "acharya",
-            "poster": "./images/pushpa.jpg"
+            "movie": "No Time To Die",
+            "poster": "./images/no-time-to-die.jpg",
+            "video": "_1n7p-i3TJQ"
         },
         {
-            "movie": "RRR",
-            "poster": "./images/pushpa.jpg"
+            "movie": "Love Story",
+            "poster": "./images/lovestory.jpg",
+            "video": "1yH_eOxpkwo"
         }
     ],
     "nizamabad": [
         {
-            "movie": "pushpa",
-            "poster": "./images/pushpa.jpg"
+            "movie": "No Time To Die",
+            "poster": "./images/no-time-to-die.jpg",
+            "video": "_1n7p-i3TJQ"
         },
         {
-            "movie": "radhe shyam",
-            "poster": "./images/radheshyam.jpg"
+            "movie": "Love Story",
+            "poster": "./images/lovestory.jpg",
+            "video": "1yH_eOxpkwo"
         },
         {
-            "movie": "acharya",
-            "poster": "./images/pushpa.jpg"
+            "movie": "Republic",
+            "poster": "./images/republic.jpg",
+            "video": "PcTU9HxbwuE"
         },
         {
-            "movie": "RRR",
-            "poster": "./images/radheshyam.jpg"
+            "movie": "Love Story",
+            "poster": "./images/lovestory.jpg",
+            "video": "1yH_eOxpkwo"
         }
     ],
     "guntur": [
         {
-            "movie": "pushpa",
-            "poster": "./images/pushpa.jpg"
+            "movie": "Republic",
+            "poster": "./images/republic.jpg",
+            "video": "PcTU9HxbwuE"
         },
         {
-            "movie": "radhe shyam",
-            "poster": "./images/radheshyam.jpg"
-        },
-        {
-            "movie": "acharya",
-            "poster": "./images/pushpa.jpg"
-        },
-        {
-            "movie": "RRR",
-            "poster": "./images/radheshyam.jpg"
+            "movie": "No Time To Die",
+            "poster": "./images/no-time-to-die.jpg",
+            "video": "_1n7p-i3TJQ"
         }
     ]
 }
